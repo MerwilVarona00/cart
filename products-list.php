@@ -7,7 +7,7 @@ $products_data = FileUtility::openCSV('products.csv');
 
 $products = Product::convertArrayToProducts($products_data);
 
-$customer = new Customer('John Doe', 'john@mail.com');
+$customer = new Customer('Merwil', 'varona@mail.com');
 ?>
 <html>
 <head>
@@ -29,7 +29,7 @@ $customer = new Customer('John Doe', 'john@mail.com');
     <img src="<?php echo $product->getImage(); ?>" height="100px" />
     <p>
         <?php echo $product->getDescription(); ?><br/>
-        <span style="color: blue">PHP <?php echo $product->getPrice(); ?></span>
+        <span style="color: red">PHP <?php echo $product->getPrice(); ?></span>
         Qty <input type="number" name="quantity" class="quantity" value="0" />
         <button type="submit">
             ADD TO CART

@@ -8,18 +8,18 @@ $products_data = FileUtility::openCSV('products.csv');
 
 $products = Product::convertArrayToProducts($products_data);
 
-$customer = new Customer('John Doe', 'john@mail.com');
+$customer = new Customer('Merwil', 'Varona@mail.com');
 
 $shoppingCart = new ShoppingCart($customer);
 $shoppingCartItems = $shoppingCart->getAllItems();
 ?>
 <html>
 <head>
-    <title>My Cart</title>
+    <title>Merwil's Cart</title>
 </head>
 <body>
 
-<h1>Welcome <?php echo $customer->getName() ?>!</h1>
+<h1>Greetings! <?php echo $customer->getName() ?>!</h1>
 <h2>Shopping Cart</h2>
 <h4>
     <a href="products-list.php">Shop More Products</a>
